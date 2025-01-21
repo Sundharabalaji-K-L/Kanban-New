@@ -1,0 +1,52 @@
+.loader-container {
+    display: flex;
+    flex-direction: column;  /* Stack content vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center;    /* Center horizontally */
+    height: 100vh;          /* Cover full viewport height */
+    width: 100vw;           /* Cover full viewport width */
+    position: fixed;         /* Position over everything */
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.8); /* Optional background */
+    z-index: 1000;          /* Ensure it's on top */
+}
+
+.ballsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.ball {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 0 5px;
+    animation: bounce 1.2s ease-in-out infinite;
+}
+
+.ball:nth-child(1) {
+    background-color: #ff9800; /* Orange */
+    animation-delay: 0s;
+}
+
+.ball:nth-child(2) {
+    background-color: #2196f3; /* Blue */
+    animation-delay: 0.2s;
+}
+
+.ball:nth-child(3) {
+    background-color: #4caf50; /* Green */
+    animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+    0%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+}
